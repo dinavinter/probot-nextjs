@@ -11,13 +11,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --write",
     "bot:build": "tsc ./src/bot/index.ts --noEmit false --esModuleInterop --outDir ./build",
     "bot:start": "probot run ./build/index.js",
     "test": "jest"
   },
   "dependencies": {
+    "fetch": "^1.1.0",
     "next": "^12.2.5",
+    "node-fetch": "^3.2.10",
     "probot": "^12.2.7",
+    "probot-scheduler": "^2.0.0-beta.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

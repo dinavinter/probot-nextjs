@@ -1,6 +1,9 @@
 import { Probot } from 'probot';
 
 function bot(app: Probot) {
+
+  app.log.info("Yay, my app is loaded");
+  
   app.on('issues.opened', async (context) => {
     const issueComment = context.issue({
       body: 'Thanks for opening this issue!',
